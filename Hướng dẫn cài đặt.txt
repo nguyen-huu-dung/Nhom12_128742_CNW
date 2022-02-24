@@ -17,7 +17,10 @@
        		+ npm i
 		+ npm start hoặc npm run dev
 
-** Các lưu ý:
+** Các lưu ý: 
+    - Tài khoản admin: 
+ 	+ Tên đăng nhập: admin01
+            + Mật khẩu: 123456789
     - Link mongodb:  mongodb+srv://dungnh:dung27920@cluster0.ehzz5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
     - Path server (BE): http://localhost:2709
     - Path client (FE): 
