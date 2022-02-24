@@ -1,0 +1,28 @@
+** Môi trường thiết kế và xây dựng phần mềm đang sử dụng:
+ - Hệ điều hành: Windows
+ - node version: 14.18.1
+ - npm version: 6.14.15
+
+** Clone git https://github.com/nguyen-huu-dung/Nhom12_128742_CNW.git
+  * Mở folder " Source Code" chứa 2 bộ src: 
+	- Front End: " Music Web FE"
+            - Back End: "Music Web BE"
+  * Các bước chạy 2 bộ src trên:
+     - Front End: " Music Web FE"
+       	Mở command line và lần lượt chạy các câu lệnh sau:
+       		+ npm i
+		+ npm start
+    - Back End: "Music Web BE"
+	Mở command line và lần lượt chạy các câu lệnh sau:
+       		+ npm i
+		+ npm start hoặc npm run dev
+
+** Các lưu ý:
+    - Link mongodb:  mongodb+srv://dungnh:dung27920@cluster0.ehzz5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+    - Path server (BE): http://localhost:2709
+    - Path client (FE): 
+	+ user: http://localhost:3000
+            + admin: http://localhost:3000/admin
+    - Link deploy heroku: 
+            + user: https://music-web-fe.herokuapp.com
+            + admin: https://music-web-fe.herokuapp.com/admin
