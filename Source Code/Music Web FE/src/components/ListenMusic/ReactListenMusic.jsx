@@ -30,7 +30,7 @@ const ReactListenMusic = () => {
         let selectedMusic = {};
         const listenedMusicLength = listenedMusic.length;
         if(listenedMusicLength < 1) {
-            ReactNotification('warning', "Không có bài hát trong playlist!");
+            repeatSong();
             return;
         }
         const forceMusicInListenedMusic = listenedMusic.findIndex((music) => music._id === forceMusic._id);
@@ -53,7 +53,7 @@ const ReactListenMusic = () => {
         let selectedMusic = {};
         const listenedMusicLength = listenedMusic.length;
         if(listenedMusicLength < 1) {
-            ReactNotification('warning', "Không có bài hát trong playlist!");
+            repeatSong();
             return;
         }
         const forceMusicInListenedMusic = listenedMusic.findIndex((music) => music._id === forceMusic._id);
@@ -103,16 +103,13 @@ const ReactListenMusic = () => {
     }, [forceMusic])
 
     useEffect(() => {
-        if(!repeat){
-            refMusic.current.onended = () => {
+        refMusic.current.onended = () => {
+            if(!repeat) {
                 moveNextSong();
             }
-        }
-        else {
-            refMusic.current.onended = () => {
+            else {
                 repeatSong();
             }
-            
         }
         refMusic.current.onpause = () => {
             setIsPlaying(false);
@@ -120,7 +117,7 @@ const ReactListenMusic = () => {
         refMusic.current.onplay = () => {
             setIsPlaying(true);
         }
-    }, [refMusic])
+    }, [refMusic, repeat, forceMusic])
 
     // tab bar
     const [ showContent, setShowContent ] = useState(false);
